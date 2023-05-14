@@ -23,7 +23,7 @@ index_template = '''
         {% for task in tasks %}
             <li>
                 {{ task }}
-                <a href="{{ url_for('delete_task', task_id=loop.index0) }}">X</a>
+                <a href="{{ url_for('delete_task', task_id=loop.index0) }}">DELETAR TAREFA</a>
             </li>
         {% endfor %}
     </ul>
