@@ -3,7 +3,7 @@ name: Package CI
 on:
   push:
     branches: [ "main", "develop", "feature/*" ]
-    paths: ['src/**', 'test/complexoperations/**', '*/*.toml']
+    paths: ['src/./**', 'test/./**', '*/*.toml']
     tags: v*
   pull_request:
     branches: [ "main" ]
