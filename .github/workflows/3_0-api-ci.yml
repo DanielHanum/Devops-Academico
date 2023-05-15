@@ -1,0 +1,24 @@
+name: FastAPI CI
+
+on:
+  push:
+    branches: [ "main", "develop", "feature/*" ]
+    paths: ['src/apicomplexoperations/**', 'test/apicomplexoperations/**']
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+    
+jobs:
+  
+  build:
+    uses: ./.github/workflows/3_1-api-code-check.yml
+    secrets: inherit
+
+  deploy:
+    needs: build
+    if: github.ref == 'refs/heads/main'
+    uses: ./.github/workflows/3_2-api-deploy.yml
+    with:
+      tag_name: latest
+    secrets: inherit
+    
