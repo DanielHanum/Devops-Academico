@@ -3,7 +3,7 @@ name: FastAPI CI
 on:
   push:
     branches: [ "main", "develop", "feature/*" ]
-    paths: ['src/apicomplexoperations/**', 'test/apicomplexoperations/**']
+    paths: ['src/api./**', 'test/api./**']
   pull_request:
     branches: [ "main" ]
   workflow_dispatch:

@@ -22,7 +22,7 @@ jobs:
         uses: dsaltares/fetch-gh-release-asset@1.0.0
         with:
           regex: true
-          file: "complexoperations.*"
+          file: "..*"
           target: "dist/"
           version: tags/${{ inputs.tag_name }}
           token: ${{ secrets.MY_TOKEN }}
