@@ -1,3 +1,8 @@
-class test_main:
-    def test1(self):
-            return True
+import unittest
+
+class TestPass(unittest.TestCase):
+    def test_pass(self):
+        pass
+
+if __name__ == '__main__':
+    unittest.main()
